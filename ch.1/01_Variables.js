@@ -10,9 +10,10 @@ accountEmail= "Ali@gmail.com";
 accountPassword = "123456789";
 accountCity = "Lahore";
 
+//👇👇 Console.table we can use when we want to get the output in a proper table form.
 console.table([accountId, accountEmail, accountEmail,accountCity ]);
 
-// Summary 
+//📖 Summary 
 // CONST: The const variables are not allowd to change the value and Const is block scoped. OR you cannot change the CONST variable value in future in the same program.
-// LET: The LET is also same like block scoped but you can change the value in future. 
-//VAR: The VAR declaration is globally scoped or function scoped. 
+// LET: Block scopre, can declare before use, variable cannot redeclared.
+// VAR: The VAR declaration is globally scoped or function scoped. used in code written for older browsers. 
