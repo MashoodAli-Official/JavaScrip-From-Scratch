@@ -1,4 +1,4 @@
-// 🚨 OBJECTS IN JAVASCRIPT
+// 🚨 OBJECTS IN JAVASCRIPT - PART 1
 
 // 👇 Singleton Object
 // Singleton objects are created using Object.create() method.
