@@ -30,3 +30,29 @@ function addTwoNumbers(number1, number2) {
   
   // Testing the loginMessage function with a username
   console.log(loginMessage("Mashood")); // Expected output: Mashood just logged in  
+
+  // Using rest parameters to sum all prices in a cart
+function calculateCartPrice(...prices) {
+  // Summing all provided prices using the reduce method
+  return prices.reduce((total, current) => total + current, 0);
+};
+console.log(calculateCartPrice(200, 300, 400)); // Output: 900
+
+// Handling an object as a function parameter
+const user = {
+  username: "Mashood",
+  price: 200,
+};
+function handleObject({username, price}) {
+  // Destructuring the object to access its properties directly
+  console.log(`Username is ${username} and price is ${price}`);
+}
+handleObject(user); // Output: Username is Mashood and price is 200
+
+// Passing an array to a function and returning its second value
+const myNewArray = [222, 333, 444];
+function returnSecondValue(array) {
+  // Accessing the second element of the array directly
+  return array[1];
+};
+console.log(returnSecondValue(myNewArray)); // Output: 333
