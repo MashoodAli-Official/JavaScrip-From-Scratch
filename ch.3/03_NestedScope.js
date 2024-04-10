@@ -25,4 +25,26 @@ function outerFunction() {
 }
 
 var myClosure = outerFunction(); // myClosure is now a reference to innerFunction
-myClosure(); // Logs: 'I am outside!'
+// myClosure(); // Logs: 'I am outside!'
+
+
+
+// 👇👇 **************************************👇👇
+// In this example:
+// The outerFunction contains an inner function innerFunction.
+// The innerFunction can access variables defined in the outerFunction, such as outerVariable.
+// When outerFunction is called, it also calls innerFunction, which then prints out the values of outerVariable and innerVariable demonstrating the nested scope.
+
+function outerFunction() {
+    let outerVariable = "I'm from the outer function";
+
+    function innerFunction() {
+        let innerVariable = "I'm from the inner function";
+        console.log(outerVariable);
+        console.log(innerVariable);
+    }
+
+    innerFunction();
+}
+
+outerFunction();
