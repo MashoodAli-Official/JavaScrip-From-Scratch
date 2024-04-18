@@ -1,0 +1,26 @@
+**ITERATION INTRODUCTION**
+In JavaScript, iteration refers to the process of executing a block of code 
+repeatedly for a set number of times or while a certain condition holds true. 
+This is typically done using loops. 
+There are several ways to implement iteration in 👇 JavaScript:
+
+1️⃣ for Loop: The for loop is one of the most common ways to iterate through a range of values. 
+It takes three expressions: the initialization, the condition, and the final expression that 
+is evaluated at the end of each loop iteration.
+
+2️⃣ while Loop: A while loop continues to execute a block of code as long as the specified 
+condition is true.
+
+3️⃣ do-while Loop:
+Unlike the while loop, a do-while loop will execute the block of code once before checking 
+if the condition is true, then it will repeat the loop as long as the condition is true.
+ 
+4️⃣ for-in Loop:
+The for-in loop is used to iterate over the enumerable properties of an object.
+
+5️⃣ for-of Loop:
+The for-of loop is used to iterate over iterable objects like arrays, strings, maps, 
+node lists, and more. It iterates over the values of an iterable object.
+
+6️⃣ Array.forEach Method:
+This method is specifically for arrays, and it allows you to execute a function on each item in the array.
