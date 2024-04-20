@@ -5,7 +5,7 @@
 // updateExpression: This expression is executed after each iteration of the loop body. It's typically used to update the loop counter variable.
 
 for (let i=0; i<5; 1++){
-  console.log("This Foor loop", i );
+  console.log("This For loop", i );
 }
 
 // In this example:
