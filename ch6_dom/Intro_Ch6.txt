@@ -1,0 +1,7 @@
+DOM IN JAVASCRIPT
+A simple definition of the DOM (Document Object Model) is that it's a programming 
+interface provided by web browsers that represents web documents as a hierarchical 
+tree structure. Each node in the tree represents an element, attribute, or piece 
+of text in the document, allowing programming languages like JavaScript to 
+interactively access, manipulate, and update the content, structure, and style of 
+web pages.
