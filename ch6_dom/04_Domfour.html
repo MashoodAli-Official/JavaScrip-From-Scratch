@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="myHeader">Hello World</h1>
+
+<form>
+  <input type="text" id="myInput" />
+  <button type="button" id="myButton">Change Text</button>
+</form>
+
+<script>
+// Select the element with the id "myHeader"
+const header = document.getElementById("myHeader");
+
+// Select the input element with the id "myInput"
+const input = document.getElementById("myInput");
+
+// Select the button element with the id "myButton"
+const button = document.getElementById("myButton");
+
+// Define a function to change the text of the header
+function changeText() {
+  // Get the value of the input field
+  const newText = input.value;
+
+  // Set the text content of the header to the value of the input field
+  header.textContent = newText;
+}
+
+// Add an event listener to the button to call the changeText function when it is clicked
+button.addEventListener("click", changeText);
+</script>
+
+</body>
+</html>
