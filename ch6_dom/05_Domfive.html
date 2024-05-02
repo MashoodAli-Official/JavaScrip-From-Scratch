@@ -1,35 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Accessing Elements in the DOM</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation Example</title>
 </head>
 <body>
-  <!-- Example 1: Selecting elements by ID -->
-  <div id="myDiv">This is my div.</div>
-
-  <!-- Example 2: Querying elements using querySelector and querySelectorAll -->
-  <h1>My First Heading</h1>
-  <h2>My Second Heading</h2>
-  <p>Some text below the second heading.</p>
-  <ul>
-    <li class="active">Item One</li>
-    <li>Item Two</li>
-    <li class="active">Item Three</li>
+  <h1 id="heading">Hello, DOM!</h1>
+  <p class="paragraph">This is a paragraph.</p>
+  <ul id="list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
   </ul>
-  
-  <!-- Script section for demonstration purposes -->
+  <button id="btn">Click me</button>
+
   <script>
-    // Example 1: Selecting elements by ID
-    const myDiv = document.getElementById('myDiv');
-    console.log(myDiv); // Output: <div id="myDiv">...</div>
-    
-    // Example 2: Querying elements using querySelector and querySelectorAll
-    const h1 = document.querySelector('h1');
-    console.log(h1); // Output: <h1>My First Heading</h1>
-    
-    const activeItems = document.querySelectorAll('.active');
-    console.log(activeItems); // Output: NodeList(2) [li.active, li.active]
+    // Selecting elements
+    const heading = document.getElementById('heading');
+    const paragraphs = document.getElementsByClassName('paragraph');
+    const list = document.getElementById('list');
+    const button = document.getElementById('btn');
+
+    // Manipulating elements
+    heading.textContent = 'DOM Manipulation';
+    paragraphs[0].style.color = 'blue';
+
+    // Creating and removing elements
+    const newListItem = document.createElement('li');
+    newListItem.textContent = 'Item 4';
+    list.appendChild(newListItem);
+
+    const firstItem = list.firstElementChild;
+    list.removeChild(firstItem);
+
+    // Events
+    button.addEventListener('click', function() {
+      alert('Button clicked!');
+    });
+
+    // Traversing the DOM
+    const listItems = list.children;
+    console.log('List items:');
+    for (let i = 0; i < listItems.length; i++) {
+      console.log(listItems[i].textContent);
+    }
   </script>
 </body>
 </html>
