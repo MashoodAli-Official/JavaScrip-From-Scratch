@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model (DOM)</title>
+    <script>
+        window.onload = () => {
+            // Setting Text Content
+            const contentDiv = document.getElementById("content");
+            contentDiv.textContent = "Hello World!";
+
+            // Setting Inner HTML Content
+            const introductionSection = document.getElementById("introduction");
+            introductionSection.innerHTML = "<p>This is the introduction section.</p>";
+
+            // Appending Children to a Parent Node
+            const myListUl = document.getElementById("myList");
+            const firstLi = document.createElement("li");
+            firstLi.textContent = "First item.";
+            const secondLi = document.createElement("li");
+            secondLi.textContent = "Second item.";
+            myListUl.appendChild(firstLi);
+            myListUl.appendChild(secondLi);
+
+            // Prepending Children to a Parent Node
+            const numbersUl = document.getElementById("numbers");
+            const firstLiPrepended = document.createElement("li");
+            firstLiPrepended.textContent = "One";
+            const secondLiPrepended = document.createElement("li");
+            secondLiPrepended.textContent = "Two";
+            const thirdLiPrepended = document.createElement("li");
+            thirdLiPrepended.textContent = "Three";
+            numbersUl.insertBefore(firstLiPrepended, numbersUl.firstChild);
+            numbersUl.insertBefore(secondLiPrepended, numbersUl.firstChild);
+            numbersUl.insertBefore(thirdLiPrepended, numbersUl.firstChild);
+
+            // Replacing Existing Children
+            const fruitsUl = document.getElementById("fruits");
+            const newLi = document.createElement("li");
+            newLi.textContent = "Oranges";
+            const oldLi = fruitsUl.firstChild;
+            fruitsUl.replaceChild(newLi, oldLi);
+
+            // Removing Child Nodes
+            const vegetablesUl = document.getElementById("vegetables");
+            const potatoesLi = vegetablesUl.lastChild;
+            vegetablesUl.removeChild(potatoesLi);
+        };
+    </script>
+</head>
+<body>
+    <!-- Setting Text Content -->
+    <div id="content"></div>
+
+    <!-- Setting Inner HTML Content -->
+    <section id="introduction"></section>
+
+    <!-- Appending Children to a Parent Node -->
+    <ul id="myList"></ul>
+
+    <!-- Prepending Children to a Parent Node -->
+    <ol id="numbers"></ol>
+
+    <!-- Replacing Existing Children -->
+    <ul id="fruits">
+      <li>Apples</li>
+      <li>Bananas</li>
+      <li>Cherries</li>
+    </ul>
+
+    <!-- Removing Child Nodes -->
+    <ul id="vegetables">
+      <li>Carrots</li>
+      <li>Broccoli</li>
+      <li>Potatoes</li>
+    </ul>
+</body>
+</html>
