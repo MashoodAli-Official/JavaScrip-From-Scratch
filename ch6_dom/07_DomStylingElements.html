@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Styling Elements with DOM</title>
+</head>
+<body>
+    <!-- Heading for the page -->
+    <h1>Styling Elements with DOM</h1>
+
+    <!-- Paragraph element with an ID for targeting with JavaScript -->
+    <p id="paragraph">This is a paragraph.</p>
+
+    <!-- Button element with an onclick event handler to call the changeStyle() function -->
+    <button onclick="changeStyle()">Change Style</button>
+
+    <script>
+        // Function to change the style of the paragraph element
+        function changeStyle() {
+            // Get the paragraph element by its ID
+            var paragraph = document.getElementById("paragraph");
+
+            // Change the style properties of the paragraph
+            paragraph.style.color = "red"; // Change the text color to red
+            paragraph.style.fontSize = "20px"; // Change the font size to 20 pixels
+            paragraph.style.fontWeight = "bold"; // Make the text bold
+        }
+    </script>
+</body>
+</html>
