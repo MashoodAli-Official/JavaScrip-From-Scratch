@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Handler Example</title>
+</head>
+<body>
+    <h1>Button Click Event Handler</h1>
+    <button id="myButton">Click me</button>
+
+    <h1>Form Submission Event Handler</h1>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        // Button click event handler
+        const button = document.getElementById('myButton');
+        button.addEventListener('click', function() {
+            alert('Button clicked!');
+        });
+
+        // Form submission event handler
+        const form = document.getElementById('myForm');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+
+            const nameInput = document.getElementById('name');
+            const name = nameInput.value;
+
+            alert(`Hello, ${name}!`);
+        });
+    </script>
+</body>
+</html>
