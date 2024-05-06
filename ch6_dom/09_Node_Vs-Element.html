@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Node vs Element Example</title>
+</head>
+<body>
+  <!-- This is a comment node node node node -->
+  <div id="myDiv">
+    <p>This is a text node inside a paragraph element.</p>
+    <p>Read This 👇👇</p>
+    <p>In the context of the Document Object Model (DOM), a node is a fundamental building 
+        block that represents a single part of a document structure. There are different 
+        types of nodes, including element nodes, text nodes, comment nodes, and more. 
+        An element, on the other hand, is a specific type of node that represents an HTML 
+        tag or element in the document.</p>
+  </div>
+
+  <script>
+    // Accessing the comment node
+    const commentNode = document.body.childNodes[1];
+    console.log(commentNode.nodeType); // Output: 8 (Comment node)
+    console.log(commentNode.data); // Output: " This is a comment node "
+
+    // Creating a new text node
+    const newTextNode = document.createTextNode("This is a new text node.");
+    console.log(newTextNode.nodeType); // Output: 3 (Text node)
+    console.log(newTextNode.data); //This is a new text node.
+
+    // Cloning an existing node
+    const clonedDiv = document.getElementById("myDiv").cloneNode(true);
+    console.log(clonedDiv.outerHTML); // Output: <div id="myDiv"><p>This is a text node inside a paragraph element.</p></div>
+  </script>
+</body>
+</html>
