@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Note Taking</title>
+</head>
+<body>
+
+<h1>Simple Note Taking</h1>
+
+<div>
+  <input type="text" id="noteInput" placeholder="Enter your note">
+  <button onclick="addNote()">Add Note</button>
+</div>
+
+<ul id="noteList">
+  <!-- Notes will be added here dynamically -->
+</ul>
+
+<script>
+  // Function to add a new note
+  function addNote() {
+    var noteInput = document.getElementById("noteInput");
+    var noteText = noteInput.value.trim(); // Trim whitespace
+    if (noteText === "") {
+      alert("Please enter a note.");
+      return;
+    }
+
+    var noteList = document.getElementById("noteList");
+    var newNote = document.createElement("li");
+    newNote.textContent = noteText;
+    noteList.appendChild(newNote);
+
+    noteInput.value = ""; // Clear input after adding note
+  }
+</script>
+
+</body>
+</html>
