@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="mainHeading">This is read operation in DOM </h1>
+    <p class="paragraph">This is Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe alias earum pariatur fugiat. At nam, aspernatur quos, laborum dolor rem veniam quae ad molestias voluptatum iusto maxime culpa. Aliquam, ratione?</p>
+    <ul id="myList">
+        <li>Item Orange</li>
+        <li>Item Apple</li>
+        <li>Item grapes</li>
+    </ul>
+
+    <script>
+        const heading = document.getElementById("mainHeading");
+        console.log(heading.textContent);
+
+        const loremParagraph = document.getElementsByClassName("paragraph");
+        console.log(loremParagraph[0].textContent);
+
+        const list = document.getElementById("myList");
+        console.log(list.children[0]);
+    </script>
+</body>
+</html>
