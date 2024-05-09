@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single File Simple Update Example</title>
+    <!-- Include styles here if needed -->
+</head>
+<body>
+    <!-- Create a label, input field, and a button element -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" value="John Doe">
+    <button onclick="updateName()">Update Name</button>
+
+    <!-- Add a paragraph to display updated text -->
+    <p id="display"></p>
+
+    <!-- Inline script below -->
+    <script>
+        // Get elements by ID
+        const nameInput = document.getElementById('name');
+        const displayText = document.getElementById('display');
+
+        // Function to update the displayed text
+        function updateName() {
+          // Set the innerHTML property of 'display' to show the new name
+          displayText.innerHTML = `Hello ${nameInput.value}!`;
+          
+          // Optional: You can also use the textContent property instead of innerHTML
+          // displayText.textContent = `Hello ${nameInput.value}!`;
+        }
+      </script>
+</body>
+</html>
