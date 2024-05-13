@@ -1,0 +1,22 @@
+ An event in JavaScript is an action or occurrence that happens in the web page or application. 
+ Event handlers or event listeners are functions that get executed in response to specific events. 
+ These functions take an event object as their argument which contains information about the event that occurred.
+
+There are several types of events available in JavaScript, some common ones include:
+
+* **Click events**: triggered when an element is clicked by the user (e.g., 'click', 'dblclick')
+* **Keyboard events**: triggered when keyboard keys are pressed ('keydown', 'keyup', 'keypress')
+* **Load events**: fired when an external resource has finished loading (e.g., 'load', 'DOMContentLoaded')
+* **Form events**: fired when forms are submitted or reset (e.g., 'submit', 'reset')
+* **Mouse events**: triggered when the mouse interacts with elements (e.g., 'mouseover', 'mouseout', 'mousemove')
+* **Scroll events**: fired when the scroll position changes (e.g., 'scroll')
+* **Resize events**: fired when the size of the viewport changes (e.g., 'resize').
+
+These are just a few examples, there are lots of other events too. The type of event used depends on what kind of interaction or behavior you want to implement in your web page or app.
+
+Here is an example of how to add an event listener to respond to a key press event:
+document.addEventListener('keydown', function(event) {
+    console.log(`Key ${event.code} was pressed`);
+});
+```
+This script listens for all key down events on the entire document, it then logs the name of the key that was pressed. This way we can capture every time someone presses a key while they are on our website.
