@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Keyboard Event Example</title>
+</head>
+<body>
+    <h1>Keyboard Event Example</h1>
+    <p>Type some text in the box below:</p>
+    <input type="text" id="textInput" placeholder="Type here...">
+    <p>Typed characters: <span id="typedChars"></p>
+
+    <script>
+        const textInput = document.getElementById('textInput');
+        const typedCharsDisplay = document.getElementById('typedChars');
+
+        textInput.addEventListener('keydown', function(event) {
+            if (event.key !== 'Enter') {
+                typedCharsDisplay.textContent += event.key;
+                // += is the compound assignment operator in JavaScript. 
+                //It performs the addition operation and then assigns the result back to the left-hand operand. 
+                // In this case, it's appending the new value to the existing value of textContent
+            }
+        });
+    </script>
+</body>
+</html>
